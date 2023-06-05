@@ -1,0 +1,19 @@
+﻿-- ovo je komentar i neće se izvesti
+use master;
+drop database if exists edunovawp1;
+go
+create database edunovawp1;
+go
+use edunovawp1;
+
+insert into komentar (vrijemekomentiranja,opis,objava,osoba)
+values ('2023-06-05',250,null,null);
+
+insert into svidamisekomentar (osoba,komentar)
+values (null,null);
+
+insert into objava (naslov,opis,vrijemeizrade,ipadresa,osoba,slika)
+values (50,250,null,20,null,50);
+
+insert into osoba (ime,prezime,datumrodenja,email,lozinka,slika,aktivan)
+values (25,25,null,50,60,100,null);
