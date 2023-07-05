@@ -1,25 +1,58 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.6.33815.320
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01CiklicnaTablica", "E01CiklicnaTablica\E01CiklicnaTablica.csproj", "{D5F4450E-B9C4-43D8-B855-090EC19E299B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D5F4450E-B9C4-43D8-B855-090EC19E299B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5F4450E-B9C4-43D8-B855-090EC19E299B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5F4450E-B9C4-43D8-B855-090EC19E299B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5F4450E-B9C4-43D8-B855-090EC19E299B}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {754DE59D-B8BF-4666-AC0A-3838E116E969}
-	EndGlobalSection
-EndGlobal
+﻿int redaka = 5, stupaca = 5;
+Console.Write("Unesi broj redova:   ");
+redaka = int.Parse(Console.ReadLine());
+Console.Write("Unesi broj stupaca: ");
+stupaca = int.Parse(Console.ReadLine());
+int[,] matrica = new int[redaka, stupaca];
+
+for (int i = 0; i < redaka; i++)
+{
+    for (int j = 0; j < stupaca; j++)
+    {
+        Console.Write(matrica[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("***********************");
+
+int b = 1;
+
+//matrica [redaka - 1, stupaca - 1] = b++;
+//matrica [redaka - 1, stupaca  - 3] = b++;
+//matrica [redaka - 1, stupaca  - 5] = b++;
+//matrica [redaka - 1, stupaca  - 2] = b++;
+//matrica [redaka - 1, stupaca  - 4] = b++;
+//matrica [redaka - 1, stupaca  - 6] = b++;
+
+for (int i = 1; i <= stupaca; i++)
+{
+    matrica[redaka - 1, stupaca - i] = b++;
+}
+
+for (int i = 0; i < redaka; i++)
+{
+    for (int j = 0; j < stupaca; j++)
+    {
+        Console.Write(matrica[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+
+for (int i = redaka - 2; i >= 0; i--)
+{
+    matrica[i, 0] = b++;
+}
+
+
+for (int i = 0; i < redaka; i++)
+{
+    for (int j = 0; j < stupaca; j++)
+    {
+        Console.Write(matrica[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("***********************");
+
+
+
