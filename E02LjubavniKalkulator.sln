@@ -1,25 +1,8 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.6.33815.320
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02LjubavniKalkulator", "E02LjubavniKalkulator\E02LjubavniKalkulator.csproj", "{06606FCF-6FE9-4465-84C3-64C2E7EE00EB}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{06606FCF-6FE9-4465-84C3-64C2E7EE00EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06606FCF-6FE9-4465-84C3-64C2E7EE00EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06606FCF-6FE9-4465-84C3-64C2E7EE00EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06606FCF-6FE9-4465-84C3-64C2E7EE00EB}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A74AB8DC-657E-4979-8DC4-99AA2AB0198E}
-	EndGlobalSection
-EndGlobal
+int Tip3()
+{
+    return new Random().Next();
+}
+
+Console.WriteLine(Tip3());
+int slucajniBroj = Tip3 ();
+Console.WriteLine(slucajniBroj);
