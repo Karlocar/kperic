@@ -1,0 +1,93 @@
+namespace E03LjetniRad
+{
+    internal class Komentar:Entitet
+    {
+        public DateTime vrijemekomentiranja { get; set; }
+        public string opis { get; set; }
+        public string objava { get; set; }
+        public string osoba { get; set; }
+    }
+}
+
+namespace E03LjetniRad
+{
+    internal abstract class Entitet
+    {
+        public int Sifra { get; set; }
+    }
+}
+
+namespace E03LjetniRad
+{
+    internal class Svidamisekomentar:Entitet
+    {
+      public string osoba { get; set; }
+        public string komentar { get; set; }
+    }
+}
+
+namespace E03LjetniRad
+{
+    internal class Objava:Entitet
+    {
+       public string naslov { get; set; }
+        public string opis { get; set; }
+        public DateTime vrijemeizrade { get; set; }
+        public string ipadresa { get; set; }
+        public int osoba { get; set; }
+        public string slika { get; set; }
+    }
+}
+
+namespace E03LjetniRad
+{
+    internal class Izbornik
+    {
+            
+        public ObradaOsoba ObradaOsoba { get; }
+        public ObradaoObjava ObradaObjava { get; }
+
+        private ObradaKomentar ObradaKomentar;
+
+        public Izbornik()
+        {
+            ObradaOsoba= new ObradaOsoba();
+            ObradaObjava= new ObradaObjava();
+            ObradaKomentar = new ObradaKomentar(this);
+            ObradaKomentar = new ObradaKomentar(this);
+            PozdravnaPoruka();
+            PrikaziIzbornik();
+        }
+    }
+
+namespace E03LjetniRad
+{
+    internal class Osoba:Entitet
+    {
+        public string ime { get; set; }
+        public string prezimw { get; set; }
+        public DateTime datumrodenja { get; set; }
+        public string email { get; set; }
+        public string lozinka { get; set; }
+        public string slika { get; set; }
+        public int aktivan { get; set; }
+    }
+}
+
+namespace E03LjetniRad
+{
+    internal class ObradaOsoba
+    {
+        public List<Osoba> Osobe { get; }
+        private <Osoba> Osobe;
+        private Izbornik Izbornik;
+        public ObradaOsoba()
+        {
+            Osobe = new List<Osoba>();
+            }
+        public ObradaOsoba(Izbornik izbornik) : this()
+        {
+            this.Izbornik = izbornik;
+        }
+
+        public ObradaOsoba()
