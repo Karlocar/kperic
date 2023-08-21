@@ -1,4 +1,4 @@
-﻿int redaka = 10, stupaca = 10;
+﻿int redaka = 5, stupaca = 5;
 Console.Write("Unesi broj redova:   ");
 redaka = int.Parse(Console.ReadLine());
 Console.Write("Unesi broj stupaca: ");
@@ -22,11 +22,7 @@ int b = 1;
 //matrica [redaka - 1, stupaca  - 3] = b++;
 //matrica [redaka - 1, stupaca  - 4] = b++;
 //matrica [redaka - 1, stupaca  - 5] = b++;
-//matrica [redaka - 1, stupaca  - 6] = b++;
-//matrica [redaka - 1, stupaca  - 7] = b++;
-//matrica [redaka - 1, stupaca  - 8] = b++;
-//matrica [redaka - 1, stupaca  - 9] = b++;
-//matrica [redaka - 1, stupaca  - 10] = b++;
+
 
 
 
