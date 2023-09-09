@@ -1,0 +1,31 @@
+create table osoba 
+(
+sifra int not null primary key identity (1,1),
+ime varchar (25) not null,
+prezime varchar (25) not null ,
+datumrodenja datetime not null,
+email varchar (50) not null,
+lozinka varchar (40) not null,
+slika varchar (100) not null
+);
+
+create table objava 
+(
+sifra int not null primary key identity (1,1,
+naslov varchar (50) not null,
+opis varchar (250) not null,
+vrijemeizrade datetime not null ,
+ipadresa varchar (20) not null,
+osoba int not null,
+slika varchar (50) not null
+);
+
+create table komentar
+(
+sifra int not null primary key identity (1,1),
+vrijemekomentiranja datetime not null ,
+opis varchar (250) not null,
+objava int not null,
+osoba int not null
+); 
+
