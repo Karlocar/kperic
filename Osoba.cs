@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ljetni_Rad
+﻿using System.ComponentModel.DataAnnotations;
+namespace Instagram.Models
 {
-    internal class Osoba:Entitet
+    public class Osoba : Entitet
     {
-        public String Ime { get; set; }
-        public String   Prezime { get; set; }
-        public string KorisnickoIme { get; set; }
-        public string Lozinka { get; set; }
+        [Required]
+        public string? ime { get; set; }
+        [Required]
+        [Range(30,500)]
+        public string? prezime { get; set;}
+        public DateTime datumrodenja { get; set; }
+        public string? korisnickoime { get; set; }
+        public string? lozinka { get; set; }
+        public string? slika { get; set; }
     }
 }
