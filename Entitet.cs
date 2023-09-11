@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ljetni_Rad
+﻿using System.ComponentModel.DataAnnotations;
+namespace Instagram.Models
 {
-    internal abstract class Entitet
+    public class Entitet
     {
-        public int Sifra { get; set; }
+        [Key]
+        public int sifra { get; set; }
     }
 }
